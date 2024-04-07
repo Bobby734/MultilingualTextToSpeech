@@ -23,7 +23,7 @@ def reset():
 # app title
 st.title(':blue[Multilingual SWA]') 
 # creating a list of conversions in the app for user selection.
-list_of_values = ["Select source for conversion","Text to Text Conversion","Text file to Text conversion", "PDF File to Text conversion"]
+list_of_values = ["Select source for conversion","Text to Text conversion","Text file to Text conversion", "PDF File to Text conversion"]
 # creating a list of user names to access the app functionality.
 allowed_names = [st.secrets["USER1"], st.secrets["USER2"], st.secrets["USER3"]] 
 # prmpting user to enter login name to access app.
@@ -38,7 +38,7 @@ if name in allowed_names:
         language = st.selectbox(":blue[Enter the target language]", lang_values, key='language')
         position = lang_values.index(language)
         # Code to execute when user selection is "Text to Text conversion"
-        if operation == "Text to Text Conversion": # validating user selections.
+        if operation == "Text to Text conversion": # validating user selections.
             user_text = st.text_area(':blue[Enter your text]', max_chars=1000) # Enabling the user to enter free hand text with max of 1000 charecters.
             st.write(':orange[*If text is more than 1000 charecters, please use "Text file to Text conversion".]') # Display mesg if more than 1000 chars required.
             submit1 = st.checkbox(label= ":blue[Select to convert Text]") # getting confirmation from user to convert.
