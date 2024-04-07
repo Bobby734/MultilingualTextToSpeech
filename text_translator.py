@@ -3,8 +3,9 @@ def translator(text, convert_to = "English"):
 
     import os
 
-    key_file = open('C:\\Users\\nagar\\OneDrive\\Documents\\GenAI - LangChain\\OAIAPI_KEY.txt')
-    api_key = key_file.read()
+    #key_file = open('C:\\Users\\nagar\\OneDrive\\Documents\\GenAI - LangChain\\OAIAPI_KEY.txt')
+    #api_key = key_file.read()
+    api_key = st.secrets["OPENAI_API_KEY"]
 
     from langchain_openai.chat_models import ChatOpenAI
     from langchain_core.prompts import ChatPromptTemplate
