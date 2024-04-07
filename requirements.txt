@@ -1,0 +1,5 @@
+# Belowa are the required Python Packages for this app:
+streamlit
+pdfminer.six
+LangChain
+gtts
