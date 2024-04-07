@@ -25,7 +25,7 @@ st.title(':blue[Multilingual SWA]')
 # creating a list of conversions in the app for user selection.
 list_of_values = ["Select source for conversion","Text to Text Conversion","Text file to Text conversion", "PDF File to Text conversion"]
 # creating a list of user names to access the app functionality.
-allowed_names = ["Edureka", "Nagaraju"] 
+allowed_names = [st.secrets["USER1"], st.secrets["USER2"], st.secrets["USER3"]] 
 # prmpting user to enter login name to access app.
 name = st.text_input(':blue[Enter your name or organization name]', key = 'name')
 # validating user input for name with names allowed to access.
