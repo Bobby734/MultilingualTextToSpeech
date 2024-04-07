@@ -1,18 +1,15 @@
+import os
+from langchain_openai.chat_models import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.prompts import SystemMessagePromptTemplate, ChatMessagePromptTemplate
+from langchain_core.prompts import AIMessagePromptTemplate, HumanMessagePromptTemplate
+
 def translator(text, api_key, convert_to = "English"):
-
-
-    import os
 
     #key_file = open('C:\\Users\\nagar\\OneDrive\\Documents\\GenAI - LangChain\\OAIAPI_KEY.txt')
     #api_key = key_file.read()
-    
 
-    from langchain_openai.chat_models import ChatOpenAI
-    from langchain_core.prompts import ChatPromptTemplate
-    from langchain_core.prompts import SystemMessagePromptTemplate, ChatMessagePromptTemplate
-    from langchain_core.prompts import AIMessagePromptTemplate, HumanMessagePromptTemplate
-
-#def translator(text, convert_to = "English"):
+    #def translator(text, convert_to = "English"):
 
     #Creating a chat object 
     chat = ChatOpenAI(model = "gpt-3.5-turbo", openai_api_key = api_key)
