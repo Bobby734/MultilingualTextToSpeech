@@ -11,7 +11,7 @@ def text_conv_display(user_text,language):
         st.write(user_text)
     with col2:
         st.subheader("Converted Text")
-        conv_text = translator(text = user_text, convert_to = language)
+        conv_text = translator(text = user_text, convert_to = language, api_key = st.secrets["OPENAI_API_KEY"])
         st.write(conv_text)
     return conv_text
 
